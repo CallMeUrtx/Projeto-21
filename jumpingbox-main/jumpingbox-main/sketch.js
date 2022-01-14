@@ -1,6 +1,6 @@
 var tela
 var bloco1, bloco2, bloco3, bloco4
-var bola, arestas
+var bola, bordas
 var music
 
 function preload() {
@@ -9,7 +9,7 @@ function preload() {
 }
 
 function setup() {
-  tela = createTela(800, 600)
+  tela = createCanvas(800, 600)
 
   bloco1 = createSprite(0, 580, 360, 30)
   bloco1.shapeColor = 'blue'
@@ -18,10 +18,10 @@ function setup() {
   bloco2.shapeColor = 'orange'
 
   //crie aqui mais dois blocos, ou seja, bloco3 e bloco4
-  bloco3 = creatSprite(100, 580, 100, 30)
+  bloco3 = createSprite(100, 580, 100, 30)
   bloco3.shapeColor = 'yellow'
 
-  bloco4 = creatSprite(300, 580, 150, 30)
+  bloco4 = createSprite(300, 580, 150, 30)
   bloco4 = shapeColor = 'green'
 
   bola = createSprite(random(20, 750), 100, 40, 40)
@@ -33,7 +33,7 @@ function setup() {
 
 function draw() {
   background(rgb(169, 169, 169))
-  arestas = createArestasprites()
+  bordas = createEdgeSprites()
   bola.bounceOff(arestas)
 
   //escreva o código de ricochete de bola para bloco1
@@ -49,7 +49,7 @@ function draw() {
     bola.velocityY = 0
 
     //escreva o código para parar a música
-    music.play()
+    music.stop()
   }
 
   //escreva o código de ricochete de bola para bloco3
