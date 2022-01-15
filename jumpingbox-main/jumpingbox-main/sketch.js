@@ -38,12 +38,12 @@ function draw() {
 
   //escreva o código de ricochete de bola para bloco1
   if (bloco1.isTouching(bola) && bola.bounceOff(bloco1)) {
-    bola.shapeColor = 'blue'
+    bloco1.shapeColor = 'blue'
     music.play()
   }
 
   if (bloco2.isTouching(bola)) {
-    bola.shapeColor = 'orange'
+    bloco2.shapeColor = 'orange'
     //escreva o código para definir velocityX e velocityY da bola como 0
     bola.velocityX = 0
     bola.velocityY = 0
@@ -54,13 +54,13 @@ function draw() {
 
   //escreva o código de ricochete de bola para bloco3
   if (bloco3.isTouching(bola) && bola.bounceOff(bloco3)) {
-    bola.shapeColor = 'yellow'
+    bloco3.shapeColor = 'yellow'
     music.play()
   }
 
   //escreva o código de ricochete de bola para bloco4
   if (bloco4.isTouching(bola) && bola.bounceOff(bloco4)) {
-    bola.shapeColor = 'green'
+    bloco4.shapeColor = 'green'
     music.play()
   }
 
