@@ -22,7 +22,7 @@ function setup() {
   bloco3.shapeColor = 'yellow'
 
   bloco4 = createSprite(300, 580, 150, 30)
-  bloco4 = shapeColor = 'green'
+  bloco4.shapeColor = 'green'
 
   bola = createSprite(random(20, 750), 100, 40, 40)
   bola.shapeColor = rgb(255, 255, 255)
